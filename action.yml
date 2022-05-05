@@ -1,0 +1,13 @@
+name: "DevGrid Sync"
+description: "Sync your component to DevGrid via Github."
+runs:
+  using: "composite"
+  steps:
+    - name: Download Degrid CLI Utility
+      shell: bash
+      run: |
+        curl -Lo devgrid-linux-gzipped https://pkg.devgrid.io/latest/devgrid-latest-linux-x64.tar.gz
+        tar -xvf devgrid-linux-gzipped
+    - name: Sync DevGrid Components
+      shell: bash
+      run: ./linux/devgrid-cli sync
