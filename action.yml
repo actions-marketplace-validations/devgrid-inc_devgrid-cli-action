@@ -1,5 +1,9 @@
 name: "DevGrid Sync"
 description: "Sync your component to DevGrid via Github."
+author: 'devgrid-inc'
+branding:
+  icon: upload
+  color: blue
 runs:
   using: "composite"
   steps:
